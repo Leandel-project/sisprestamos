@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Configuracion extends Model
 {
     use HasFactory;
+
+    // Indica explícitamente la tabla a usar
+    protected $table = 'configuraciones';
 }

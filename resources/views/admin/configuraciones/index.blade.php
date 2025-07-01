@@ -7,7 +7,11 @@
 
 @section('content')
     <div class="row">
-        
+        <ul>
+      @foreach($configuracion as $config)
+        <li>{{ $config->nombre }}</li>
+      @endforeach
+</ul>
     </div>
 @stop
 

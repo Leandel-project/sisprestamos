@@ -13,10 +13,11 @@ class ConfiguracionController extends Controller
      */
     public function index()
     {
-      return view('admin.configuraciones.index');
-        // return response()->json(Configuracion::all());
-        // return Configuracion::all();
-        // return view('admin.configuraciones.index', ['configuraciones' => Configuracion::all()]);
+        // Obtener todos los registros de la tabla configuraciones
+       $configuracion = Configuracion::all();
+
+        // Pasar la variable a la vista usando compact
+        return view('admin.configuraciones.index', compact('configuracion'));
     }
 
     /**
