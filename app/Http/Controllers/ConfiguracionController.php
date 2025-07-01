@@ -11,15 +11,14 @@ class ConfiguracionController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        // Obtener todos los registros de la tabla configuraciones
-       $configuracion = Configuracion::all();
+  public function index()
+{
+    // Obtener todos los registros de la tabla configuraciones
+    $configuraciones = Configuracion::all();
 
-        // Pasar la variable a la vista usando compact
-        return view('admin.configuraciones.index', compact('configuracion'));
-    }
-
+    // Pasar la variable a la vista usando compact
+    return view('admin.configuraciones.index', compact('configuraciones'));
+}
     /**
      * Show the form for creating a new resource.
      */
